@@ -12,12 +12,12 @@
     color: #333;
   }
   header {
-    background: #007bff;
+    background: #ff6600; /* naranja */
     color: white;
     padding: 8px 20px;
     display: flex;
     justify-content: flex-end;
-    gap: 15px;
+    gap: 20px;
     font-size: 14px;
     align-items: center;
   }
@@ -33,11 +33,12 @@
   }
   .logo-container {
     text-align: center;
-    margin: 20px 0;
+    margin: 25px 0;
   }
   .logo-container img {
-    max-width: 200px;
+    max-width: 220px;
     height: auto;
+    filter: saturate(2) brightness(1.1); /* resalta logo si es necesario */
   }
   nav {
     display: flex;
@@ -49,7 +50,7 @@
   nav button {
     padding: 10px 18px;
     border: none;
-    background: #007bff;
+    background: #ff6600; /* naranja */
     color: white;
     cursor: pointer;
     font-size: 16px;
@@ -57,11 +58,11 @@
     transition: background 0.3s;
   }
   nav button:hover, nav button.active {
-    background: #0056b3;
+    background: #cc5200; /* naranja oscuro */
   }
   main {
     max-width: 900px;
-    margin: 0 auto 60px;
+    margin: 0 auto 80px;
     padding: 0 15px;
   }
   section.content-section {
@@ -71,7 +72,7 @@
     display: block;
   }
   h2 {
-    color: #007bff;
+    color: #ff6600;
     margin-top: 0;
   }
   ul {
@@ -98,237 +99,4 @@
     align-items: center;
     justify-content: center;
     z-index: 1000;
-    text-decoration: none;
-  }
-  .whatsapp-float:hover {
-    background: #1ebe57;
-  }
-  /* Scrollable container for big lists */
-  .scroll-container {
-    max-height: 450px;
-    overflow-y: auto;
-    border: 1px solid #ddd;
-    padding: 10px;
-    background: #f9f9f9;
-  }
-</style>
-</head>
-<body>
-
-<header>
-  <a href="https://www.facebook.com/ColombiaPetFood" target="_blank" rel="noopener">Facebook</a>
-  <a href="https://www.instagram.com/colombiapetfood" target="_blank" rel="noopener">Instagram</a>
-  <span class="phone">📞 +57 123 456 7890</span>
-</header>
-
-<div class="logo-container">
-  <img src="tu-imagen.png" alt="Logo Colombia Pet Food" />
-</div>
-
-<nav>
-  <button class="active" data-target="perros">🐶 Perros</button>
-  <button data-target="gatos">🐱 Gatos</button>
-  <button data-target="servicios">🛠️ Servicios</button>
-  <button data-target="farmacia">💊 Farmacia</button>
-  <button data-target="videollamada">👨‍⚕️ Videollamada</button>
-</nav>
-
-<main>
-  <!-- Perros -->
-  <section id="perros" class="content-section active scroll-container">
-    <h2>Catálogo - Perros</h2>
-    <h3>Alimentos</h3>
-    <b>Premium</b>
-    <ul>
-      <li>Cachorros: Hill’s, Royal Canin, Pro Plan, Acana, Orijen, Nupec, Diamond Naturals</li>
-      <li>Adultos: Hill’s, Royal Canin, Pro Plan, Acana, Orijen, Nupec, Diamond Naturals</li>
-      <li>Senior: Hill’s, Royal Canin, Pro Plan, Acana, Orijen, Diamond Naturals</li>
-    </ul>
-    <b>Estándar</b>
-    <ul>
-      <li>Cachorros: Equilibrio, Agility Gold, Nutra Nuggets, Excellent, Monello, Envolve</li>
-      <li>Adultos: Equilibrio, Agility Gold, Nutra Nuggets, Excellent, Monello, Envolve</li>
-      <li>Senior: Equilibrio, Agility Gold, Nutra Nuggets, Excellent, Monello</li>
-    </ul>
-    <b>Económicas</b>
-    <ul>
-      <li>Cachorros: Ringo, Chunky, Pedigree, Dogourmet, Nutrecan, Wow Can, Salvaje, Nutrion, Br for Dog, Pixie</li>
-      <li>Adultos: Ringo, Chunky, Pedigree, Dogourmet, Nutrecan, Wow Can, Salvaje, Nutrion, Br for Dog, Pixie</li>
-      <li>Senior: Ringo, Chunky, Pedigree, Dogourmet, Nutrecan</li>
-    </ul>
-
-    <h3>Accesorios</h3>
-    <b>Básicos (alta rotación)</b>
-    <ul>
-      <li>Collares (nylon, cuero, ajustables)</li>
-      <li>Correas (estándar, retráctiles)</li>
-      <li>Platos de acero inoxidable o antideslizantes</li>
-      <li>Bebederos automáticos</li>
-      <li>Cama y cojines básicos</li>
-      <li>Juguetes de caucho tipo Kong</li>
-      <li>Pecheras</li>
-    </ul>
-    <b>De cuidado y salud</b>
-    <ul>
-      <li>Peines y cepillos (de cerdas suaves, deslanadores)</li>
-      <li>Cortaúñas</li>
-      <li>Botellas de agua portátiles para paseo</li>
-      <li>Bolsas y dispensadores para excrementos</li>
-      <li>Champú medicado y normal</li>
-      <li>Cepillos dentales y pasta enzimática</li>
-    </ul>
-  </section>
-
-  <!-- Gatos -->
-  <section id="gatos" class="content-section scroll-container">
-    <h2>Catálogo - Gatos</h2>
-    <h3>Alimentos</h3>
-    <b>Premium</b>
-    <ul>
-      <li>Cachorros: Hill’s, Royal Canin, Pro Plan, Orijen, Vet Life, Diamond Naturals</li>
-      <li>Adultos: Hill’s, Royal Canin, Pro Plan, Orijen, Vet Life, Diamond Naturals</li>
-      <li>Senior: Hill’s, Royal Canin, Pro Plan, Orijen, Vet Life</li>
-    </ul>
-    <b>Estándar</b>
-    <ul>
-      <li>Cachorros: Equilibrio, Agility Gold, Nutra Nuggets, Monello, Excellent, True Nature, Evolve</li>
-      <li>Adultos: Equilibrio, Agility Gold, Nutra Nuggets, Monello, Excellent, True Nature, Evolve</li>
-      <li>Senior: Equilibrio, Agility Gold, Nutra Nuggets, Monello, Excellent</li>
-    </ul>
-    <b>Económicas</b>
-    <ul>
-      <li>Cachorros: Whiskas, Mirringo, Ringo, Cat Chow, Donkat, Felix, Besties, Reeld’s, Gatsy, Kongo, Wow Cat, Br for Cat, Chunky, Nutrion</li>
-      <li>Adultos: Whiskas, Mirringo, Ringo, Cat Chow, Donkat, Felix, Besties, Reeld’s, Gatsy, Kongo, Wow Cat, Br for Cat, Chunky, Nutrion</li>
-      <li>Senior: Whiskas, Mirringo, Ringo, Cat Chow, Donkat, Felix</li>
-    </ul>
-
-    <h3>Accesorios</h3>
-    <b>Básicos (alta rotación)</b>
-    <ul>
-      <li>Platos dobles (agua y comida)</li>
-      <li>Bebederos tipo fuente</li>
-      <li>Areneros con y sin tapa</li>
-      <li>Palas para arena</li>
-      <li>Camas tipo iglú o mantas</li>
-      <li>Juguetes con plumas o ratones de tela</li>
-      <li>Rasguñadores de cartón o sisal</li>
-    </ul>
-    <b>De cuidado y salud</b>
-    <ul>
-      <li>Peines y cepillos anti-nudos</li>
-      <li>Cortaúñas</li>
-      <li>Champú para gatos</li>
-      <li>Collar con cascabel y seguro antiestrangulamiento</li>
-      <li>Bolsas para transporte</li>
-      <li>Arena sanitaria (aglomerante y no aglomerante)</li>
-    </ul>
-
-    <h3>Accesorios combinados (perros y gatos)</h3>
-    <ul>
-      <li>Transportadoras plásticas y de tela</li>
-      <li>Jaulas y corrales plegables</li>
-      <li>Ropa (suéteres, impermeables, disfraces en temporada)</li>
-      <li>Productos antipulgas (pipetas, collares, sprays)</li>
-      <li>Toallas absorbentes</li>
-      <li>Comederos automáticos</li>
-    </ul>
-  </section>
-
-  <!-- Servicios -->
-  <section id="servicios" class="content-section scroll-container">
-    <h2>Servicios</h2>
-    <ul>
-      <li>Consultas veterinarias presenciales</li>
-      <li>Baños y peluquería para mascotas</li>
-      <li>Entrenamiento y adiestramiento</li>
-      <li>Guardería y hospedaje para mascotas</li>
-      <li>Venta de productos personalizados</li>
-      <li>Asesoría nutricional para mascotas</li>
-      <!-- Puedes agregar más servicios aquí -->
-    </ul>
-  </section>
-
-  <!-- Farmacia -->
-  <section id="farmacia" class="content-section scroll-container">
-    <h2>Farmacia</h2>
-    <b>1. Antiparasitarios internos (uso frecuente)</b>
-    <ul>
-      <li>Tabletas y pastas: Drontal, Endogard, Canex, Albendazol, Fenbendazol</li>
-      <li>Suspensiones orales: Panacur, Albendavet</li>
-      <li>Para cachorros: jarabes con praziquantel + febantel</li>
-    </ul>
-    <b>2. Antiparasitarios externos</b>
-    <ul>
-      <li>Pipetas: Frontline, Advantage, Bravecto spot-on, Revolution</li>
-      <li>Collares: Seresto, Preventic</li>
-      <li>Sprays y talcos: Frontline spray, Flee, talco antipulgas</li>
-    </ul>
-    <b>3. Vitaminas y suplementos</b>
-    <ul>
-      <li>Multivitamínicos: Vigantol, Pet Tabs, Aminomix</li>
-      <li>Suplementos para articulaciones: Condroprotectores (Condrovet, Flexadin)</li>
-      <li>Aceite de salmón / Omega 3 para piel y pelo</li>
-    </ul>
-    <b>4. Productos de higiene veterinaria</b>
-    <ul>
-      <li>Champús medicados (antibacterianos, antimicóticos)</li>
-      <li>Limpiadores óticos</li>
-      <li>Pasta dental y enjuague oral veterinario</li>
-      <li>Toallitas desinfectantes para mascotas</li>
-    </ul>
-    <b>5. Medicamentos de uso común (bajo riesgo)</b>
-    <p><em>(Siempre con control veterinario para prescripción)</em></p>
-    <ul>
-      <li>Antiinflamatorios no esteroideos: Meloxicam oral y en gotas</li>
-      <li>Antihistamínicos: Loratadina, Cetirizina</li>
-      <li>Antidiarreicos: Kaopectin, Probióticos (Pro-Kolin, Enterogermina Vet)</li>
-      <li>Antibióticos tópicos: cremas con mupirocina, cloranfenicol ótico</li>
-    </ul>
-  </section>
-
-  <!-- Videollamada -->
-  <section id="videollamada" class="content-section scroll-container">
-    <h2>Videollamada con Médico Veterinario 👨‍⚕️</h2>
-    <p>Para consultas rápidas y urgencias, agenda una videollamada con nuestro médico veterinario.</p>
-    <ul>
-      <li>Consulta desde la comodidad de tu hogar</li>
-      <li>Diagnóstico y asesoría inmediata</li>
-      <li>Horarios flexibles</li>
-      <li>Prescripción y recomendaciones personalizadas</li>
-    </ul>
-    <p><strong>Para agendar, contáctanos vía WhatsApp o teléfono.</strong></p>
-  </section>
-</main>
-
-<!-- WhatsApp flotante -->
-<a href="https://wa.me/573001234567" target="_blank" rel="noopener" class="whatsapp-float" title="Contáctanos por WhatsApp">
-  💬
-</a>
-
-<script>
-  const buttons = document.querySelectorAll('nav button');
-  const sections = document.querySelectorAll('.content-section');
-
-  buttons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      // Remove active class from all buttons
-      buttons.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-
-      // Show the target section, hide others
-      const target = btn.getAttribute('data-target');
-      sections.forEach(sec => {
-        if(sec.id === target) {
-          sec.classList.add('active');
-        } else {
-          sec.classList.remove('active');
-        }
-      });
-      // Scroll to top of main content on change
-      document.querySelector('main').scrollTop = 0;
-    });
-  });
-</script>
-
-</body>
-</html>
+    text-deco
