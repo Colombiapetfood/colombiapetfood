@@ -1,178 +1,334 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Colombia Pet Food</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      text-align: center;
-      background-color: #f9f9f9;
-    }
-
-    .top-bar {
-      background-color: #6a1b9a;
-      color: white;
-      padding: 10px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-
-    .top-bar .social {
-      display: flex;
-      gap: 15px;
-      align-items: center;
-    }
-
-    .top-bar a {
-      color: white;
-      text-decoration: none;
-      font-size: 18px;
-    }
-
-    .logo img {
-      max-width: 90%;
-      height: auto;
-      margin-top: 20px;
-    }
-
-    h1 {
-      color: #333;
-    }
-
-    .categories {
-      margin: 20px auto;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 15px;
-    }
-
-    .categories button {
-      background-color: #ff6600;
-      color: white;
-      padding: 12px 20px;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      font-size: 16px;
-    }
-
-    .categories button:hover {
-      background-color: #e65100;
-    }
-
-    .products {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin: 30px auto;
-      gap: 25px;
-    }
-
-    .product {
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      padding: 15px;
-      width: 220px;
-      background-color: white;
-    }
-
-    .product img {
-      max-width: 100%;
-      height: auto;
-    }
-
-    .product h3 {
-      margin: 10px 0 5px;
-    }
-
-    .product p {
-      margin: 0;
-      font-weight: bold;
-      color: #009688;
-    }
-
-    .video-call-icon {
-      margin-right: 8px;
-    }
-
-    footer {
-      background-color: #eee;
-      padding: 20px;
-      margin-top: 40px;
-    }
-  </style>
-
-  <!-- Íconos -->
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Colombia Pet Food</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin:0;
+    background: #fff;
+    color: #333;
+  }
+  header {
+    background: #007bff;
+    color: white;
+    padding: 8px 20px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    font-size: 14px;
+    align-items: center;
+  }
+  header a {
+    color: white;
+    text-decoration: none;
+  }
+  header a:hover {
+    text-decoration: underline;
+  }
+  .phone {
+    font-weight: bold;
+  }
+  .logo-container {
+    text-align: center;
+    margin: 20px 0;
+  }
+  .logo-container img {
+    max-width: 200px;
+    height: auto;
+  }
+  nav {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  nav button {
+    padding: 10px 18px;
+    border: none;
+    background: #007bff;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background 0.3s;
+  }
+  nav button:hover, nav button.active {
+    background: #0056b3;
+  }
+  main {
+    max-width: 900px;
+    margin: 0 auto 60px;
+    padding: 0 15px;
+  }
+  section.content-section {
+    display: none;
+  }
+  section.content-section.active {
+    display: block;
+  }
+  h2 {
+    color: #007bff;
+    margin-top: 0;
+  }
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  ul li {
+    margin-bottom: 4px;
+  }
+  .whatsapp-float {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: #25d366;
+    color: white;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    font-size: 32px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    text-decoration: none;
+  }
+  .whatsapp-float:hover {
+    background: #1ebe57;
+  }
+  /* Scrollable container for big lists */
+  .scroll-container {
+    max-height: 450px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    padding: 10px;
+    background: #f9f9f9;
+  }
+</style>
 </head>
 <body>
 
-  <!-- Barra superior -->
-  <div class="top-bar">
-    <div class="social">
-      <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
-      <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
-    </div>
-    <div class="phone">
-      📞 300 910 8496
-    </div>
-  </div>
+<header>
+  <a href="https://www.facebook.com/ColombiaPetFood" target="_blank" rel="noopener">Facebook</a>
+  <a href="https://www.instagram.com/colombiapetfood" target="_blank" rel="noopener">Instagram</a>
+  <span class="phone">📞 +57 123 456 7890</span>
+</header>
 
-  <!-- Imagen central -->
-  <div class="logo">
-    <img src="Sin título.jpg" alt="Peludos y Mimos">
-  </div>
+<div class="logo-container">
+  <img src="tu-imagen.png" alt="Logo Colombia Pet Food" />
+</div>
 
-  <h1>Bienvenidos a Colombia Alimentos para mascotas</h1>
-  <p>Tu tienda de confianza para mascotas.</p>
+<nav>
+  <button class="active" data-target="perros">🐶 Perros</button>
+  <button data-target="gatos">🐱 Gatos</button>
+  <button data-target="servicios">🛠️ Servicios</button>
+  <button data-target="farmacia">💊 Farmacia</button>
+  <button data-target="videollamada">👨‍⚕️ Videollamada</button>
+</nav>
 
-  <!-- Categorías -->
-  <div class="categories">
-    <button>🐶 Perros</button>
-    <button>🐱 Gatos</button>
-    <button>🛠️ Servicios</button>
-    <button>💊 Farmacia</button>
-    <button>
-      <i class="fas fa-user-md video-call-icon"></i> Videollamada con Veterinario
-    </button>
-  </div>
+<main>
+  <!-- Perros -->
+  <section id="perros" class="content-section active scroll-container">
+    <h2>Catálogo - Perros</h2>
+    <h3>Alimentos</h3>
+    <b>Premium</b>
+    <ul>
+      <li>Cachorros: Hill’s, Royal Canin, Pro Plan, Acana, Orijen, Nupec, Diamond Naturals</li>
+      <li>Adultos: Hill’s, Royal Canin, Pro Plan, Acana, Orijen, Nupec, Diamond Naturals</li>
+      <li>Senior: Hill’s, Royal Canin, Pro Plan, Acana, Orijen, Diamond Naturals</li>
+    </ul>
+    <b>Estándar</b>
+    <ul>
+      <li>Cachorros: Equilibrio, Agility Gold, Nutra Nuggets, Excellent, Monello, Envolve</li>
+      <li>Adultos: Equilibrio, Agility Gold, Nutra Nuggets, Excellent, Monello, Envolve</li>
+      <li>Senior: Equilibrio, Agility Gold, Nutra Nuggets, Excellent, Monello</li>
+    </ul>
+    <b>Económicas</b>
+    <ul>
+      <li>Cachorros: Ringo, Chunky, Pedigree, Dogourmet, Nutrecan, Wow Can, Salvaje, Nutrion, Br for Dog, Pixie</li>
+      <li>Adultos: Ringo, Chunky, Pedigree, Dogourmet, Nutrecan, Wow Can, Salvaje, Nutrion, Br for Dog, Pixie</li>
+      <li>Senior: Ringo, Chunky, Pedigree, Dogourmet, Nutrecan</li>
+    </ul>
 
-  <!-- Productos -->
-  <div class="products">
-    <div class="product">
-      <img src="https://images.unsplash.com/photo-1601758123927-1961c981b46d?fit=crop&w=300&q=80" alt="Comida Perro">
-      <h3>Alimento Perro</h3>
-      <p>$35.000</p>
-    </div>
-    <div class="product">
-      <img src="https://images.unsplash.com/photo-1592194996308-7b43878e84a6?fit=crop&w=300&q=80" alt="Comida Gato">
-      <h3>Alimento Gato</h3>
-      <p>$28.000</p>
-    </div>
-    <div class="product">
-      <img src="https://images.unsplash.com/photo-1619983081563-430f636027ef?fit=crop&w=300&q=80" alt="Juguete Mascota">
-      <h3>Juguete</h3>
-      <p>$15.000</p>
-    </div>
-  </div>
+    <h3>Accesorios</h3>
+    <b>Básicos (alta rotación)</b>
+    <ul>
+      <li>Collares (nylon, cuero, ajustables)</li>
+      <li>Correas (estándar, retráctiles)</li>
+      <li>Platos de acero inoxidable o antideslizantes</li>
+      <li>Bebederos automáticos</li>
+      <li>Cama y cojines básicos</li>
+      <li>Juguetes de caucho tipo Kong</li>
+      <li>Pecheras</li>
+    </ul>
+    <b>De cuidado y salud</b>
+    <ul>
+      <li>Peines y cepillos (de cerdas suaves, deslanadores)</li>
+      <li>Cortaúñas</li>
+      <li>Botellas de agua portátiles para paseo</li>
+      <li>Bolsas y dispensadores para excrementos</li>
+      <li>Champú medicado y normal</li>
+      <li>Cepillos dentales y pasta enzimática</li>
+    </ul>
+  </section>
 
-  <!-- WhatsApp -->
-  <a href="https://wa.me/573009108496" style="position: fixed; bottom: 20px; right: 20px; background-color: #25d366; color: white; padding: 15px; border-radius: 50%; font-size: 24px;" target="_blank" title="Chatear por WhatsApp">
-    <i class="fab fa-whatsapp"></i>
-  </a>
+  <!-- Gatos -->
+  <section id="gatos" class="content-section scroll-container">
+    <h2>Catálogo - Gatos</h2>
+    <h3>Alimentos</h3>
+    <b>Premium</b>
+    <ul>
+      <li>Cachorros: Hill’s, Royal Canin, Pro Plan, Orijen, Vet Life, Diamond Naturals</li>
+      <li>Adultos: Hill’s, Royal Canin, Pro Plan, Orijen, Vet Life, Diamond Naturals</li>
+      <li>Senior: Hill’s, Royal Canin, Pro Plan, Orijen, Vet Life</li>
+    </ul>
+    <b>Estándar</b>
+    <ul>
+      <li>Cachorros: Equilibrio, Agility Gold, Nutra Nuggets, Monello, Excellent, True Nature, Evolve</li>
+      <li>Adultos: Equilibrio, Agility Gold, Nutra Nuggets, Monello, Excellent, True Nature, Evolve</li>
+      <li>Senior: Equilibrio, Agility Gold, Nutra Nuggets, Monello, Excellent</li>
+    </ul>
+    <b>Económicas</b>
+    <ul>
+      <li>Cachorros: Whiskas, Mirringo, Ringo, Cat Chow, Donkat, Felix, Besties, Reeld’s, Gatsy, Kongo, Wow Cat, Br for Cat, Chunky, Nutrion</li>
+      <li>Adultos: Whiskas, Mirringo, Ringo, Cat Chow, Donkat, Felix, Besties, Reeld’s, Gatsy, Kongo, Wow Cat, Br for Cat, Chunky, Nutrion</li>
+      <li>Senior: Whiskas, Mirringo, Ringo, Cat Chow, Donkat, Felix</li>
+    </ul>
 
-  <!-- Footer -->
-  <footer>
-    © 2025 Colombia Pet Food. Todos los derechos reservados.
-  </footer>
+    <h3>Accesorios</h3>
+    <b>Básicos (alta rotación)</b>
+    <ul>
+      <li>Platos dobles (agua y comida)</li>
+      <li>Bebederos tipo fuente</li>
+      <li>Areneros con y sin tapa</li>
+      <li>Palas para arena</li>
+      <li>Camas tipo iglú o mantas</li>
+      <li>Juguetes con plumas o ratones de tela</li>
+      <li>Rasguñadores de cartón o sisal</li>
+    </ul>
+    <b>De cuidado y salud</b>
+    <ul>
+      <li>Peines y cepillos anti-nudos</li>
+      <li>Cortaúñas</li>
+      <li>Champú para gatos</li>
+      <li>Collar con cascabel y seguro antiestrangulamiento</li>
+      <li>Bolsas para transporte</li>
+      <li>Arena sanitaria (aglomerante y no aglomerante)</li>
+    </ul>
+
+    <h3>Accesorios combinados (perros y gatos)</h3>
+    <ul>
+      <li>Transportadoras plásticas y de tela</li>
+      <li>Jaulas y corrales plegables</li>
+      <li>Ropa (suéteres, impermeables, disfraces en temporada)</li>
+      <li>Productos antipulgas (pipetas, collares, sprays)</li>
+      <li>Toallas absorbentes</li>
+      <li>Comederos automáticos</li>
+    </ul>
+  </section>
+
+  <!-- Servicios -->
+  <section id="servicios" class="content-section scroll-container">
+    <h2>Servicios</h2>
+    <ul>
+      <li>Consultas veterinarias presenciales</li>
+      <li>Baños y peluquería para mascotas</li>
+      <li>Entrenamiento y adiestramiento</li>
+      <li>Guardería y hospedaje para mascotas</li>
+      <li>Venta de productos personalizados</li>
+      <li>Asesoría nutricional para mascotas</li>
+      <!-- Puedes agregar más servicios aquí -->
+    </ul>
+  </section>
+
+  <!-- Farmacia -->
+  <section id="farmacia" class="content-section scroll-container">
+    <h2>Farmacia</h2>
+    <b>1. Antiparasitarios internos (uso frecuente)</b>
+    <ul>
+      <li>Tabletas y pastas: Drontal, Endogard, Canex, Albendazol, Fenbendazol</li>
+      <li>Suspensiones orales: Panacur, Albendavet</li>
+      <li>Para cachorros: jarabes con praziquantel + febantel</li>
+    </ul>
+    <b>2. Antiparasitarios externos</b>
+    <ul>
+      <li>Pipetas: Frontline, Advantage, Bravecto spot-on, Revolution</li>
+      <li>Collares: Seresto, Preventic</li>
+      <li>Sprays y talcos: Frontline spray, Flee, talco antipulgas</li>
+    </ul>
+    <b>3. Vitaminas y suplementos</b>
+    <ul>
+      <li>Multivitamínicos: Vigantol, Pet Tabs, Aminomix</li>
+      <li>Suplementos para articulaciones: Condroprotectores (Condrovet, Flexadin)</li>
+      <li>Aceite de salmón / Omega 3 para piel y pelo</li>
+    </ul>
+    <b>4. Productos de higiene veterinaria</b>
+    <ul>
+      <li>Champús medicados (antibacterianos, antimicóticos)</li>
+      <li>Limpiadores óticos</li>
+      <li>Pasta dental y enjuague oral veterinario</li>
+      <li>Toallitas desinfectantes para mascotas</li>
+    </ul>
+    <b>5. Medicamentos de uso común (bajo riesgo)</b>
+    <p><em>(Siempre con control veterinario para prescripción)</em></p>
+    <ul>
+      <li>Antiinflamatorios no esteroideos: Meloxicam oral y en gotas</li>
+      <li>Antihistamínicos: Loratadina, Cetirizina</li>
+      <li>Antidiarreicos: Kaopectin, Probióticos (Pro-Kolin, Enterogermina Vet)</li>
+      <li>Antibióticos tópicos: cremas con mupirocina, cloranfenicol ótico</li>
+    </ul>
+  </section>
+
+  <!-- Videollamada -->
+  <section id="videollamada" class="content-section scroll-container">
+    <h2>Videollamada con Médico Veterinario 👨‍⚕️</h2>
+    <p>Para consultas rápidas y urgencias, agenda una videollamada con nuestro médico veterinario.</p>
+    <ul>
+      <li>Consulta desde la comodidad de tu hogar</li>
+      <li>Diagnóstico y asesoría inmediata</li>
+      <li>Horarios flexibles</li>
+      <li>Prescripción y recomendaciones personalizadas</li>
+    </ul>
+    <p><strong>Para agendar, contáctanos vía WhatsApp o teléfono.</strong></p>
+  </section>
+</main>
+
+<!-- WhatsApp flotante -->
+<a href="https://wa.me/573001234567" target="_blank" rel="noopener" class="whatsapp-float" title="Contáctanos por WhatsApp">
+  💬
+</a>
+
+<script>
+  const buttons = document.querySelectorAll('nav button');
+  const sections = document.querySelectorAll('.content-section');
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      // Remove active class from all buttons
+      buttons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      // Show the target section, hide others
+      const target = btn.getAttribute('data-target');
+      sections.forEach(sec => {
+        if(sec.id === target) {
+          sec.classList.add('active');
+        } else {
+          sec.classList.remove('active');
+        }
+      });
+      // Scroll to top of main content on change
+      document.querySelector('main').scrollTop = 0;
+    });
+  });
+</script>
 
 </body>
 </html>
-
-
