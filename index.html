@@ -4,61 +4,163 @@
   <meta charset="UTF-8">
   <title>ColombiPetFood</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f8f8f8; }
-    header { text-align: center; padding: 20px; background: #ff6600; color: #fff; }
-    header img { max-width: 150px; display: block; margin: 0 auto; }
-    nav { display: flex; justify-content: center; gap: 20px; background: #ffa84f; padding: 10px; }
-    nav a { color: white; text-decoration: none; font-weight: bold; }
-    .productos { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap: 20px; padding: 20px; }
-    .producto { background: #fff; padding: 15px; border-radius: 8px; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-    .producto img { max-width: 100%; height: auto; }
-    .whatsapp { position: fixed; bottom: 20px; right: 20px; }
-    .whatsapp a { background: #25D366; color: white; padding: 10px 20px; border-radius: 50px; text-decoration: none; font-size: 18px; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #fdfdfd;
+    }
+
+    /* Barra superior */
+    .top-bar {
+      background-color: #ffa84f;
+      color: white;
+      padding: 8px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 14px;
+    }
+
+    .top-bar .contacto {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .top-bar .redes a {
+      color: white;
+      margin-left: 10px;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    header {
+      background-color: #ff6600;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    header img {
+      max-width: 120px;
+    }
+
+    nav {
+      background-color: #ff944d;
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      padding: 10px;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+    }
+
+    section {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .categorias {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 20px;
+    }
+
+    .categoria {
+      width: 120px;
+      background: #fff;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .categoria img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .whatsapp {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+    }
+
+    .whatsapp a {
+      background-color: #25D366;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 40px;
+      text-decoration: none;
+      font-weight: bold;
+    }
   </style>
 </head>
 <body>
+
+  <!-- Barra superior -->
+  <div class="top-bar">
+    <div class="contacto">
+      📞 <span>300 910 8496</span>
+    </div>
+    <div class="redes">
+      <a href="https://facebook.com" target="_blank">🌐 Facebook</a>
+      <a href="https://instagram.com" target="_blank">📸 Instagram</a>
+    </div>
+  </div>
+
+  <!-- Encabezado -->
   <header>
-    <img src="Sin título.jpg" alt="Logo">
-    <h1>ColombiPetFood</h1>
+    <img src="Sin título.jpg" alt="Logo Peludos y Mimos">
+    <h1>Peludos y Mimos</h1>
+    <p>Donde las mascotas son familia</p>
   </header>
+
+  <!-- Navegación -->
   <nav>
+    <a href="#perros">Perros</a>
+    <a href="#gatos">Gatos</a>
     <a href="#servicios">Servicios</a>
-    <a href="#productos">Productos</a>
-    <a href="#contacto">Contacto</a>
+    <a href="#farmacia">Farmacia</a>
+    <a href="#videollamada">Videollamada</a>
   </nav>
 
-  <section id="servicios" style="padding: 20px;">
-    <h2>Servicios</h2>
-    <ul>
-      <li>Venta de alimentos concentrados y húmedos</li>
-      <li>Venta de accesorios</li>
-      <li>Desparasitación y vacunación</li>
-      <li>Educación a la comunidad (jornadas gratuitas)</li>
-    </ul>
-  </section>
-
-  <section id="productos" class="productos">
-    <h2 style="grid-column: 1 / -1;">Productos Destacados</h2>
-    <div class="producto">
-      <img src="ruta_al_producto1.jpg" alt="Producto 1">
-      <h3>Alimento Natural Pollo</h3>
-      <p>desde $5.800</p>
+  <!-- Sección categorías -->
+  <section id="categorias">
+    <h2>Categorías</h2>
+    <div class="categorias">
+      <div class="categoria">
+        <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" alt="Perros">
+        <p>Perros</p>
+      </div>
+      <div class="categoria">
+        <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" alt="Gatos">
+        <p>Gatos</p>
+      </div>
+      <div class="categoria">
+        <img src="https://cdn-icons-png.flaticon.com/512/3069/3069172.png" alt="Farmacia">
+        <p>Farmacia</p>
+      </div>
+      <div class="categoria">
+        <img src="https://cdn-icons-png.flaticon.com/512/3482/3482188.png" alt="Servicios">
+        <p>Servicios</p>
+      </div>
+      <div class="categoria">
+        <img src="https://cdn-icons-png.flaticon.com/512/2784/2784459.png" alt="Videollamada">
+        <p>Videollamada</p>
+      </div>
     </div>
-    <div class="producto">
-      <img src="ruta_al_producto2.jpg" alt="Producto 2">
-      <h3>Juguete Kong</h3>
-      <p>desde $20.900</p>
-    </div>
-    <!-- Agrega más productos según necesites -->
   </section>
 
-  <section id="contacto" style="padding: 20px; text-align: center;">
-    <h2>Contáctanos</h2>
-    <p>Estamos disponibles para ayudarte vía WhatsApp</p>
-  </section>
-
+  <!-- Sección WhatsApp -->
   <div class="whatsapp">
-    <a href="https://wa.me/573001234567" target="_blank">WhatsApp</a>
+    <a href="https://wa.me/573009108496" target="_blank">📱 WhatsApp</a>
   </div>
+
 </body>
 </html>
