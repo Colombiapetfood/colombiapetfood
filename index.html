@@ -7,62 +7,59 @@
 <style>
   body {
     font-family: Arial, sans-serif;
-    margin:0;
+    margin: 0;
     background: #fff;
     color: #333;
   }
   header {
-    background: #ff6600; /* naranja */
+    background: #FF8C00; /* Naranja oscuro */
     color: white;
     padding: 8px 20px;
     display: flex;
     justify-content: flex-end;
-    gap: 20px;
-    font-size: 14px;
+    gap: 15px;
     align-items: center;
   }
   header a {
     color: white;
     text-decoration: none;
   }
-  header a:hover {
-    text-decoration: underline;
-  }
-  .phone {
+  header .phone {
     font-weight: bold;
   }
   .logo-container {
     text-align: center;
-    margin: 25px 0;
+    margin: 20px 0;
   }
   .logo-container img {
-    max-width: 220px;
+    max-width: 200px;
     height: auto;
-    filter: saturate(2) brightness(1.1); /* resalta logo si es necesario */
+    display: block;
+    margin: 0 auto;
   }
   nav {
     display: flex;
     justify-content: center;
-    gap: 12px;
+    gap: 10px;
     flex-wrap: wrap;
     margin-bottom: 20px;
   }
   nav button {
-    padding: 10px 18px;
+    padding: 10px 16px;
     border: none;
-    background: #ff6600; /* naranja */
+    background: #FF8C00;
     color: white;
     cursor: pointer;
-    font-size: 16px;
-    border-radius: 5px;
+    font-size: 15px;
+    border-radius: 4px;
     transition: background 0.3s;
   }
   nav button:hover, nav button.active {
-    background: #cc5200; /* naranja oscuro */
+    background: #e57f00;
   }
   main {
     max-width: 900px;
-    margin: 0 auto 80px;
+    margin: 0 auto 60px;
     padding: 0 15px;
   }
   section.content-section {
@@ -72,7 +69,7 @@
     display: block;
   }
   h2 {
-    color: #ff6600;
+    color: #FF8C00;
     margin-top: 0;
   }
   ul {
@@ -99,4 +96,192 @@
     align-items: center;
     justify-content: center;
     z-index: 1000;
-    text-deco
+    text-decoration: none;
+  }
+  .whatsapp-float:hover {
+    background: #1ebe57;
+  }
+  .scroll-container {
+    max-height: 450px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    padding: 10px;
+    background: #f9f9f9;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a>
+  <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
+  <span class="phone">📞 +57 300 910 8496</span>
+</header>
+
+<div class="logo-container">
+  <img src="Sin título.jpg" alt="Logo Colombia Pet Food">
+</div>
+
+<nav>
+  <button class="active" data-target="perros">Perros</button>
+  <button data-target="gatos">Gatos</button>
+  <button data-target="servicios">Servicios</button>
+  <button data-target="farmacia">Farmacia</button>
+  <button data-target="videollamada">Videollamada</button>
+</nav>
+
+<main>
+  <!-- Perros -->
+  <section id="perros" class="content-section active scroll-container">
+    <h2>Catálogo - Perros</h2>
+    <h3>Alimentos</h3>
+    <b>Premium</b>
+    <ul>
+      <li>Cachorros: Hill’s, Royal Canin, Pro Plan, Acana, Orijen, Nupec, Diamond Naturals</li>
+      <li>Adultos: Hill’s, Royal Canin, Pro Plan, Acana, Orijen, Nupec, Diamond Naturals</li>
+      <li>Senior: Hill’s, Royal Canin, Pro Plan, Acana, Orijen, Diamond Naturals</li>
+    </ul>
+    <b>Estándar</b>
+    <ul>
+      <li>Cachorros: Equilibrio, Agility Gold, Nutra Nuggets, Excellent, Monello, Envolve</li>
+      <li>Adultos: Equilibrio, Agility Gold, Nutra Nuggets, Excellent, Monello, Envolve</li>
+      <li>Senior: Equilibrio, Agility Gold, Nutra Nuggets, Excellent, Monello</li>
+    </ul>
+    <b>Económicas</b>
+    <ul>
+      <li>Cachorros: Ringo, Chunky, Pedigree, Dogourmet, Nutrecan, Wow Can, Salvaje, Nutrion, Br for Dog, Pixie</li>
+      <li>Adultos: Ringo, Chunky, Pedigree, Dogourmet, Nutrecan, Wow Can, Salvaje, Nutrion, Br for Dog, Pixie</li>
+      <li>Senior: Ringo, Chunky, Pedigree, Dogourmet, Nutrecan</li>
+    </ul>
+    <h3>Accesorios</h3>
+    <b>Básicos (alta rotación)</b>
+    <ul>
+      <li>Collares (nylon, cuero, ajustables)</li>
+      <li>Correas (estándar, retráctiles)</li>
+      <li>Platos de acero inoxidable o antideslizantes</li>
+      <li>Bebederos automáticos</li>
+      <li>Cama y cojines básicos</li>
+      <li>Juguetes de caucho tipo Kong</li>
+      <li>Pecheras</li>
+    </ul>
+    <b>De cuidado y salud</b>
+    <ul>
+      <li>Peines y cepillos (de cerdas suaves, deslanadores)</li>
+      <li>Cortaúñas</li>
+      <li>Botellas de agua portátiles para paseo</li>
+      <li>Bolsas y dispensadores para excrementos</li>
+      <li>Champú medicado y normal</li>
+      <li>Cepillos dentales y pasta enzimática</li>
+    </ul>
+  </section>
+
+  <!-- Gatos -->
+  <section id="gatos" class="content-section scroll-container">
+    <h2>Catálogo - Gatos</h2>
+    <h3>Alimentos</h3>
+    <b>Premium</b>
+    <ul>
+      <li>Cachorros: Hill’s, Royal Canin, Pro Plan, Orijen, Vet Life, Diamond Naturals</li>
+      <li>Adultos: Hill’s, Royal Canin, Pro Plan, Orijen, Vet Life, Diamond Naturals</li>
+      <li>Senior: Hill’s, Royal Canin, Pro Plan, Orijen, Vet Life</li>
+    </ul>
+    <b>Estándar</b>
+    <ul>
+      <li>Cachorros: Equilibrio, Agility Gold, Nutra Nuggets, Monello, Excellent, True Nature, Evolve</li>
+      <li>Adultos: Equilibrio, Agility Gold, Nutra Nuggets, Monello, Excellent, True Nature, Evolve</li>
+      <li>Senior: Equilibrio, Agility Gold, Nutra Nuggets, Monello, Excellent</li>
+    </ul>
+    <b>Económicas</b>
+    <ul>
+      <li>Cachorros: Whiskas, Mirringo, Ringo, Cat Chow, Donkat, Felix, Besties, Reeld’s, Gatsy, Kongo, Wow Cat, Br for Cat, Chunky, Nutrion</li>
+      <li>Adultos: Whiskas, Mirringo, Ringo, Cat Chow, Donkat, Felix, Besties, Reeld’s, Gatsy, Kongo, Wow Cat, Br for Cat, Chunky, Nutrion</li>
+      <li>Senior: Whiskas, Mirringo, Ringo, Cat Chow, Donkat, Felix</li>
+    </ul>
+    <h3>Accesorios combinados</h3>
+    <ul>
+      <li>Transportadoras plásticas y de tela</li>
+      <li>Jaulas y corrales plegables</li>
+      <li>Ropa (suéteres, impermeables, disfraces)</li>
+      <li>Productos antipulgas (pipetas, collares, sprays)</li>
+      <li>Toallas absorbentes</li>
+      <li>Comederos automáticos</li>
+    </ul>
+  </section>
+
+  <!-- Servicios -->
+  <section id="servicios" class="content-section scroll-container">
+    <h2>Servicios</h2>
+    <ul>
+      <li>Venta alimentos concentrados y húmedos</li>
+      <li>Venta de accesorios</li>
+      <li>Desparasitación y vacunación</li>
+      <li>Educación a la comunidad (jornadas gratuitas)</li>
+    </ul>
+  </section>
+
+  <!-- Farmacia -->
+  <section id="farmacia" class="content-section scroll-container">
+    <h2>Farmacia</h2>
+    <b>Antiparasitarios internos</b>
+    <ul>
+      <li>Drontal, Endogard, Canex, Albendazol, Fenbendazol</li>
+      <li>Panacur, Albendavet</li>
+      <li>Jarabes con praziquantel + febantel (cachorros)</li>
+    </ul>
+    <b>Externos</b>
+    <ul>
+      <li>Frontline, Advantage, Bravecto, Revolution</li>
+      <li>Collares Seresto, Preventic</li>
+      <li>Frontline spray, Flee, talco antipulgas</li>
+    </ul>
+    <b>Vitaminas y suplementos</b>
+    <ul>
+      <li>Vigantol, Pet Tabs, Aminomix</li>
+      <li>Condrovet, Flexadin</li>
+      <li>Aceite de salmón / Omega 3</li>
+    </ul>
+    <b>Higiene veterinaria</b>
+    <ul>
+      <li>Champús medicados</li>
+      <li>Limpiadores óticos</li>
+      <li>Pasta dental y enjuague</li>
+      <li>Toallitas desinfectantes</li>
+    </ul>
+    <b>Medicamentos comunes</b>
+    <ul>
+      <li>Meloxicam, Loratadina, Cetirizina</li>
+      <li>Kaopectin, Pro-Kolin, Enterogermina Vet</li>
+      <li>Cremas: mupirocina, cloranfenicol ótico</li>
+    </ul>
+  </section>
+
+  <!-- Videollamada -->
+  <section id="videollamada" class="content-section scroll-container">
+    <h2>Videollamada con Médico Veterinario</h2>
+    <p>Consulta desde tu hogar con nuestro veterinario. Agenda por WhatsApp o teléfono.</p>
+  </section>
+
+</main>
+
+<a href="https://wa.me/573001234567" target="_blank" class="whatsapp-float" title="Contáctanos por WhatsApp">
+  💬
+</a>
+
+<script>
+  const buttons = document.querySelectorAll('nav button');
+  const sections = document.querySelectorAll('.content-section');
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      buttons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const target = btn.getAttribute('data-target');
+      sections.forEach(sec => {
+        sec.id === target ? sec.classList.add('active') : sec.classList.remove('active');
+      });
+      document.querySelector('main').scrollTop = 0;
+    });
+  });
+</script>
+
+</body>
+</html>
