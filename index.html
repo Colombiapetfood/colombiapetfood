@@ -2,37 +2,63 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Alimentos para mascotas en Colombia</title>
+  <title>ColombiPetFood</title>
   <style>
-    body {
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      background-color: #fff8f0;
-      font-family: Arial, sans-serif;
-      text-align: center;
-    }
-
-    img {
-      max-width: 90%;
-      height: auto;
-      margin-top: 20px;
-    }
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f8f8f8; }
+    header { text-align: center; padding: 20px; background: #ff6600; color: #fff; }
+    header img { max-width: 150px; display: block; margin: 0 auto; }
+    nav { display: flex; justify-content: center; gap: 20px; background: #ffa84f; padding: 10px; }
+    nav a { color: white; text-decoration: none; font-weight: bold; }
+    .productos { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap: 20px; padding: 20px; }
+    .producto { background: #fff; padding: 15px; border-radius: 8px; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    .producto img { max-width: 100%; height: auto; }
+    .whatsapp { position: fixed; bottom: 20px; right: 20px; }
+    .whatsapp a { background: #25D366; color: white; padding: 10px 20px; border-radius: 50px; text-decoration: none; font-size: 18px; }
   </style>
 </head>
 <body>
+  <header>
+    <img src="Sin título.jpg" alt="Logo">
+    <h1>ColombiPetFood</h1>
+  </header>
+  <nav>
+    <a href="#servicios">Servicios</a>
+    <a href="#productos">Productos</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
 
-  <h1>Bienvenidos a Colombia Alimentos para mascotas</h1>
-  <p>Tu tienda de confianza para mascotas.</p>
+  <section id="servicios" style="padding: 20px;">
+    <h2>Servicios</h2>
+    <ul>
+      <li>Venta de alimentos concentrados y húmedos</li>
+      <li>Venta de accesorios</li>
+      <li>Desparasitación y vacunación</li>
+      <li>Educación a la comunidad (jornadas gratuitas)</li>
+    </ul>
+  </section>
 
-  <img src="Sin título.jpg" alt="Peludos y Mimos"/>
+  <section id="productos" class="productos">
+    <h2 style="grid-column: 1 / -1;">Productos Destacados</h2>
+    <div class="producto">
+      <img src="ruta_al_producto1.jpg" alt="Producto 1">
+      <h3>Alimento Natural Pollo</h3>
+      <p>desde $5.800</p>
+    </div>
+    <div class="producto">
+      <img src="ruta_al_producto2.jpg" alt="Producto 2">
+      <h3>Juguete Kong</h3>
+      <p>desde $20.900</p>
+    </div>
+    <!-- Agrega más productos según necesites -->
+  </section>
 
+  <section id="contacto" style="padding: 20px; text-align: center;">
+    <h2>Contáctanos</h2>
+    <p>Estamos disponibles para ayudarte vía WhatsApp</p>
+  </section>
+
+  <div class="whatsapp">
+    <a href="https://wa.me/573001234567" target="_blank">WhatsApp</a>
+  </div>
 </body>
 </html>
-
-
-
